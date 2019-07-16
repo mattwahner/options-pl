@@ -1,3 +1,4 @@
+import InflectionPoint from "./InflectionPoint";
 
 class LongPutOption {
 
@@ -5,12 +6,8 @@ class LongPutOption {
         this.option = option;
     }
 
-    belowInflection() {
-        return -1;
-    }
-
-    aboveInflection() {
-        return 0;
+    getInflectionPoint() {
+        return new InflectionPoint(1, 0);
     }
 
 }

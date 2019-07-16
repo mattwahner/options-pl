@@ -6,12 +6,9 @@ it('instantiates', () => {
     expect(longCallOption.option).toEqual(0);
 });
 
-it('below inflection is 0', () => {
+it('get inflection point', () => {
     const longCallOption = new LongCallOption(0);
-    expect(longCallOption.belowInflection()).toEqual(0);
-});
-
-it('above inflection is 1', () => {
-    const longCallOption = new LongCallOption(0);
-    expect(longCallOption.aboveInflection()).toEqual(1);
+    const inflectionPoint = longCallOption.getInflectionPoint();
+    expect(inflectionPoint.left).toEqual(0);
+    expect(inflectionPoint.right).toEqual(1);
 });
